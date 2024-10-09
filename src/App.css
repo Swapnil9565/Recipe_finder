@@ -1,0 +1,9 @@
+body{
+    font-family: "Barlow Condensed", sans-serif;
+}
+.active{
+    color: white;
+    background-color: blue;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
