@@ -14,8 +14,8 @@ function Recipes() {
       .then((res) => {
         let meals = res.data.meals;
 
-        if (meals.length > 12) {
-          setCards(meals.slice(0, 12));
+        if (meals.length > 15) {
+          setCards(meals.slice(0, 18));
         } else {
           setCards(meals);
         }
@@ -31,7 +31,7 @@ function Recipes() {
  
   return (
     <>
-      <div className='w-full bg-red-100 h-full'>
+      <div className='w-[504px] bg-red-100 h-full sm:w-[768px] md:w-[1024px] lg:w-full'>
         <div className='dropdown text-center py-5'>
           <h1 className='font-bold text-lg my-3'>Select Cuisine</h1>
           <select
@@ -39,23 +39,23 @@ function Recipes() {
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}>
             <optgroup label='Asian Cuisine'>
-              <option value='Indian'>Indian</option>
-              <option value='Chinese'>Chinese</option>
-              <option value='Malaysian'>Malaysian</option>
-              <option value='Japanese'>Japanese</option>
+              <option className="text-base md:text-lg" value='Indian'>Indian</option>
+              <option className="text-base md:text-lg" value='Chinese'>Chinese</option>
+              <option className="text-base md:text-lg" value='Malaysian'>Malaysian</option>
+              <option className="text-base md:text-lg" value='Japanese'>Japanese</option>
             </optgroup>
 
             <optgroup label='European Cuisine'>
-              <option value='Italian'>Italian</option>
-              <option value='French'>French</option>
-              <option value='British'>British</option>
-              <option value='Polish'>Polish</option>
+              <option className="text-base md:text-lg" value='Italian'>Italian</option>
+              <option className="text-base md:text-lg" value='French'>French</option>
+              <option className="text-base md:text-lg" value='British'>British</option>
+              <option className="text-base md:text-lg" value='Polish'>Polish</option>
             </optgroup>
 
             <optgroup label='American Cuisine'>
-              <option value='American'>American</option>
-              <option value='Mexican'>Mexican</option>
-              <option value='Canadian'>Canadian</option>
+              <option className="text-base md:text-lg" value='American'>American</option>
+              <option className="text-base md:text-lg" value='Mexican'>Mexican</option>
+              <option className="text-base md:text-lg" value='Canadian'>Canadian</option>
             </optgroup>
           </select>
         </div>
@@ -64,7 +64,7 @@ function Recipes() {
           {selectedOption} Foods
         </h1>
         <div className='mx-auto w-20 border-4 border-b-violet-900'></div>
-        <div className='container w-full flex flex-wrap gap-10 justify-center py-10'>
+        <div className='w-full flex flex-wrap gap-10 justify-center py-10'>
           {cards.map((card) => {
             return (
               <div
