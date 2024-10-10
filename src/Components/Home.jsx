@@ -12,7 +12,7 @@ function Home() {
            <button onClick={()=>navigate('/Recipes')} className='px-10 py-5 mb-5 text-xl font-bold bg-red-700 text-white rounded-md cursor-pointer sm:px-5 sm:py-2 sm:text-xl md:mb-0 md:px-3 md:py-2 lg:px-2 lg:py-2 lg:text-sm'>Browse Dish</button>
       </div>
       <div className="right md:h-[80vh]">
-          <img src={img} className='h-[62vh] text-slate-900 bg-slate-900 md:h-[80vh]  md:w-[80vw] lg:h-[70vh] lg:w-[70vw]' alt="" />
+          <img src={img} className='h-[62vh] text-slate-900 bg-slate-900 md:h-[80vh]  md:w-[80vw] lg:h-[60vh] lg:w-[40vw]' alt="" />
       </div>
     </div>
     
