@@ -1,9 +1,10 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
-import Recipes from "./Components/Recipes";
+import Cuisines from "./Components/Cuisines";
 import Explore from "./Components/Explore";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MealRecipe from "./Components/MealRecipe";
 function App() {
   return (
     <>
@@ -11,8 +12,9 @@ function App() {
       <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/Recipes' element={<Recipes/>}></Route>
+          <Route path='/Cuisines' element={<Cuisines/>}></Route>
           <Route path='/Explore' element={<Explore/>}></Route>
+          <Route path="/:mealId" element={<MealRecipe/>}></Route>
         </Routes>
       </Router>
     </>

@@ -1,9 +1,14 @@
 body{
     font-family: "Barlow Condensed", sans-serif;
 }
-.active{
+.navbar .active{
     color: white;
     background-color: blue;
     border-radius: 4px;
     padding: 2px 4px;
+}
+.dropdown-nav .active{
+    background-color: black;
+    padding: 2px 15px;
+    border-radius: 4px;
 }
