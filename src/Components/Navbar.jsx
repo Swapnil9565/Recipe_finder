@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar() {
   const [isClicked, setIsClicked] = useState(false)
+
   const dropdownNavbar=()=>{
-    console.log("button clicked");
          setIsClicked(!isClicked);
   }
+  const closeNavbar=()=>{
+         setIsClicked(!isClicked);
+  }
+
   return (
     <>
   
@@ -20,7 +24,9 @@ function Navbar() {
                 <li><NavLink to='/' className='cursor-pointer hidden sm:block md:block lg:block'>Home</NavLink></li>
                 <li><NavLink to='/Explore'className='cursor-pointer hidden sm:block md:block lg:block'>Get Recipe</NavLink></li>
                 <li><NavLink to='/Cuisines' className='cursor-pointer hidden sm:block md:block lg:block '>Cuisines</NavLink></li>
-                <FontAwesomeIcon onClick={dropdownNavbar} icon={faBars} className=' block text-3xl sm:hidden  md:hidden lg:hidden'/>
+                {isClicked?<FontAwesomeIcon icon={faClose} onClick={closeNavbar} className='block text-3xl sm:hidden  md:hidden lg:hidden'/>:
+                <FontAwesomeIcon onClick={dropdownNavbar} icon={faBars} className='block text-3xl sm:hidden  md:hidden lg:hidden'/>}
+                
         </div>
     </nav>
         {isClicked&&
